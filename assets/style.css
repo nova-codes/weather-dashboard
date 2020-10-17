@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #efefef;
+    font: 13px/100% 'Calibri', 'Helvetica', 'Arial', sans-serif;
+    color: #232323;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-bottom: 1px solid #6e6ada;
+}
+
+header h1 {
+    font: 90px/100% 'Darker Grotesque', sans-serif;
+    color: white;
+    text-shadow: 1px 1px #3e3a9b, -1px 1px #3e3a9b, 1px -1px #3e3a9b, -1px -1px #3e3a9b;
+}
+
+.topsearch,
+.tophistory {
+    background: #e5e5e5;
+    border-bottom: 1px solid #cdcdcd;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tophistory { 
+    background: #eaeaea;
+}
+
+.active-purple-2 input.form-control[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #ce93d8;
+    box-shadow: 0 1px 0 0 #ce93d8;
+  }
+  .active-purple input.form-control[type=text] {
+    border-bottom: 1px solid #ce93d8;
+    box-shadow: 0 1px 0 0 #ce93d8;
+  }
+
+  .active-purple .fas, .active-purple-2 .fas {
+    color: #ce93d8;
+  }
+
+  .pill {
+      padding: 10px 20px;
+      border: 1px solid #cdcdcd;
+      background: #efefef;
+      font: 11px/100% 'Calibri', sans-serif;
+      color: #ababab;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: all .5s ease;
+  }
+
+.pill:hover {
+    border-color: #ee6fcb;
+}
