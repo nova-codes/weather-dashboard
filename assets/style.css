@@ -1,3 +1,7 @@
+:root {
+    --text-outline: 1px 1px #272f5d, -1px 1px #272f5d, 1px -1px #272f5d, -1px -1px #272f5d;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -79,6 +83,7 @@ header h1 {
       letter-spacing: 2px;
       text-transform: uppercase;
       transition: all .5s ease;
+      margin-right: 5px; 
   }
 
 .pill:hover {
@@ -99,10 +104,12 @@ header h1 {
 
 .card {
     overflow: hidden; 
+    border-radius: 10px;
 }
 
 .card.weather-card .degree {
-    margin-bottom: 50px; 
+    margin-bottom: 10px; 
+    text-shadow: var(--text-outline);
 }
 
 .card.weather-card .degree:after {
@@ -133,13 +140,16 @@ header h1 {
 }
 
 .icon-color {
-    color: #01579b;
+    color: #01599d;
     text-shadow: 2px 2px white; 
-    opacity: 0.5; 
+    opacity: 0.3; 
+    mix-blend-mode: overlay; 
 }
 
 .card-title {
     font: bold 50px/100% 'Darker Grotesque', sans-serif; 
+    text-shadow: var(--text-outline);
+    letter-spacing: 2px; 
 }
 
 .date {
@@ -210,4 +220,38 @@ a.collapsed {
     opacity: 0; 
     margin: 0px auto; 
     transition: all .5s ease; 
+}
+
+.quick-facts {
+    font-size: 18px; 
+}
+
+.text-info {
+    color: #8bdfff !important;
+}
+
+.humidity:after {
+    content: '% humidity';
+}
+
+.wind-speed:after {
+    content: 'kt';
+}
+
+#current-weather {
+    text-align: center;
+    font-size: 30px; 
+    margin-bottom: 50px; 
+}
+
+.uv-favorable {
+    color: #4b9c6f;
+}
+
+.uv-moderate {
+    color: #d1b256;
+}
+
+.uv-severe {
+    color: #9c4856;
 }
