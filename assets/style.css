@@ -154,6 +154,7 @@ header h1 {
 
 .date {
     margin-bottom: 50px; 
+    font-size: 14px; 
 }
 
 .collapsing,
@@ -245,13 +246,15 @@ a.collapsed {
 }
 
 .uv-favorable {
-    color: #4b9c6f;
+    color: #4b9c6f !important;
 }
 
 .uv-moderate {
-    color: #d1b256;
+    color: #d1b256 !important;
 }
 
-.uv-severe {
-    color: #9c4856;
+.uv-severe,
+.uv-vhigh,
+.uv-extreme {
+    color: #9c4856 !important;
 }

@@ -7,7 +7,8 @@ let searchHistory = [];
 $('.date').text(moment().format('ddd' + ', ' + 'LL'));
 
 // run these first
-
+previousCity();
+showButtons();
 
 // event listener for submit button
 $('#search-city').click(function(event) {
@@ -72,7 +73,7 @@ function showButtons() {
 
 // toss the cities into local storage so they can persist
 function saveSearch() {
-    localStorage.setItem('currentCity', JSON.stringify(cityName + ', ' + stateCode));
+    localStorage.setItem('currentCity', JSON.stringify(cityName));
     localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
 }
 
@@ -124,19 +125,17 @@ async function showWeather() {
             method: "GET"
         }).then(function (response) {
             console.log(response);
-            $("#uv-text").text("UV Index: ")
-            $("#current-uv").text(response.value);
-            $("#current-uv").removeClass("uv-low uv-moderate uv-high uv-vhigh uv-extreme");
+            $(".uv-index").text(response.value + ' UV Index');
             if (response.value <= 2.99) {
-                $("#current-uv").addClass("uv-low");
+                $("#uv-level").addClass("uv-favorable");
             } else if (response.value >= 3 && response.value <= 5.99) {
-                $("#current-uv").addClass("uv-moderate");
+                $("#uv-level").addClass("uv-moderate");
             } else if (response.value >= 6 && response.value <= 7.99) {
-                $("#current-uv").addClass("uv-high");
+                $("#uv-level").addClass("uv-severe");
             } else if (response.value >= 8 && response.value <= 10) {
-                $("#current-uv").addClass("uv-vhigh");
+                $("#uv-level").addClass("uv-vhigh");
             } else {
-                $("#current-uv").addClass("uv-extreme");
+                $("#uv-level").addClass("uv-extreme");
             }
         })
     })
