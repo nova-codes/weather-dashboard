@@ -45,16 +45,31 @@ header h1 {
 .active-purple-2 input.form-control[type=text]:focus:not([readonly]) {
     border-bottom: 1px solid #ce93d8;
     box-shadow: 0 1px 0 0 #ce93d8;
+    width: 95% !important;
   }
   .active-purple input.form-control[type=text] {
     border-bottom: 1px solid #ce93d8;
     box-shadow: 0 1px 0 0 #ce93d8;
+    width: 95% !important;
+  }
+
+  input[type=text] {
+      width: 95% !important;
+  }
+
+  button#search-city {
+      border: 0; 
+      outline: 0; 
   }
 
   .active-purple .fas, .active-purple-2 .fas {
     color: #ce93d8;
   }
 
+  .md-form {
+      margin: 0 auto; 
+  }
+  
   .pill {
       padding: 10px 20px;
       border: 1px solid #cdcdcd;
@@ -72,14 +87,18 @@ header h1 {
 
 .card,
 .weather-card {
-    max-width: 18rem;
+    max-width: 52rem;
     min-height: 23rem;
     -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0.16), 0 0 0 0 rgba(0,0,0,0.12);
     box-shadow: 0 0 0 0 rgba(0,0,0,0.16), 0 0 0 0 rgba(0,0,0,0.12);
-    margin: 20px; 
+    margin: 20px auto; 
     border: 1px solid #3e3a9b; 
     flex-flow: column nowrap; 
     color: white;
+}
+
+.card {
+    overflow: hidden; 
 }
 
 .card.weather-card .degree {
@@ -97,7 +116,26 @@ header h1 {
 .weather-card {
     padding: 50px 10px;
     position: relative; 
+    z-index: 1; 
     align-items: center; 
+}
+
+.weather-icon {
+    position: absolute;
+    top: -50px;
+    left: 100px; 
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 600px; 
+    transform: rotate(26deg); 
+    z-index: -1; 
+}
+
+.icon-color {
+    color: #01579b;
+    text-shadow: 2px 2px white; 
+    opacity: 0.5; 
 }
 
 .card-title {
@@ -108,7 +146,15 @@ header h1 {
     margin-bottom: 50px; 
 }
 
+.collapsing,
+.collapse.show {
+    display: block;
+    width: 20rem;
+}
+
 .future-weather {
+    width: 100%;
+    box-sizing: border-box;
 	margin-top: 5px;
 	padding: 15px;
 	display: flex;
@@ -128,7 +174,7 @@ header h1 {
 }
 
 .future-weather:last-child {
-    border-bottom: 0; 
+    border-bottom: 0;
 }
 
 .card.weather-card .collapse-content a.collapsed:after {
@@ -143,13 +189,25 @@ header h1 {
 a.btn,
 a.btn:hover,
 a.btn:focus,
-a.btn:active {
+a.btn:active,
+a.collapsed {
+    display: block; 
     box-shadow: unset; 
     text-align: center;
-    margin: auto; 
+    margin: 0 auto; 
+    width: 100px; 
 }
 
 .toggle-btn {
-    align-self: flex-start;
     background: transparent; 
+    align-self: flex-start;
+    margin: 0 auto; 
+}
+
+.alert {
+    font: bold 20px/100% 'Darker Grotesque', sans-serif;
+    color: red;
+    opacity: 0; 
+    margin: 0px auto; 
+    transition: all .5s ease; 
 }
