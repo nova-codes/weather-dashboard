@@ -18,8 +18,10 @@
         <!-- jquery -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
-        <!-- font awesome -->
-        <script src="https://kit.fontawesome.com/9a1fc6f4a5.js" crossorigin="anonymous"></script>
+        <!-- weather icons -->
+        <link rel='stylesheet' type='text/css' href='assets/weather-icons.min.css' />
+        <link rel='stylesheet' type='text/css' href='assets/weather-icons-wind.min.css' />
+
     </head>
     <body>
         <header class='purple-gradient'> <h1> weather dashboard </h1> </header>
@@ -37,7 +39,60 @@
                 <span class='pill'> ypsilanti, mi </span>
             </div>
 
-          </div>
+            <div class='container'>
+                <div class='card weather-card blue-gradient'>
+                    <h4 class='card-title'> City, St </h4>
+                    <p class='card-text date'> Date MM/DD/YYYY </p>
+                    <div class="d-flex justify-content-between">
+                      <p class="display-1 degree"> 34 </p>
+                      <i class='wi wi-owm-200 weather-icon icon-color'> </i>
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-4">
+                        <p><i class="wi wi-raindrop text-info pr-2"></i>3% Precipitation</p>
+                        <p><i class="wi wi-strong-wind text-info pr-2"></i>21 km/h Winds</p>
+                    </div>
+
+                    <div class='collapse-content'>
+                        <div class='collapse' id='futureConditions'>
+                            <div class='future-weather'> 
+                                <span class='weekday'> Tuesday </span> 
+                                <i class='wi wi-icon'> ☼ </i> 
+                                <span class='hi-low'> 64 / 24 </span> 
+                            </div>
+
+                            <div class='future-weather'> 
+                                <span class='weekday'> Tuesday </span> 
+                                <i class='wi wi-icon'> ☼ </i> 
+                                <span class='hi-low'> 64 / 24 </span> 
+                            </div>
+
+                            <div class='future-weather'> 
+                                <span class='weekday'> Tuesday </span> 
+                                <i class='wi wi-icon'> ☼ </i> 
+                                <span class='hi-low'> 64 / 24 </span> 
+                            </div>
+
+                            <div class='future-weather'> 
+                                <span class='weekday'> Tuesday </span> 
+                                <i class='wi wi-icon'> ☼ </i> 
+                                <span class='hi-low'> 64 / 24 </span> 
+                            </div>
+
+                            <div class='future-weather'> 
+                                <span class='weekday'> Tuesday </span> 
+                                <i class='wi wi-icon'> ☼ </i> 
+                                <span class='hi-low'> 64 / 24 </span> 
+                            </div>
+                        </div>
+
+                        <a class='btn btn-flat white-text toggle-btn collapsed waves-effect' data-toggle='collapse' href='#futureConditions' aria-expanded='false' aria-controls='futureConditions'> </a>
+                    </div>
+
+                </div> <!-- /.card -->
+            </div> <!-- /.container -->
+
+    </div>
 
 
 

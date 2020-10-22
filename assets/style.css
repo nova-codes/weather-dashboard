@@ -69,3 +69,87 @@ header h1 {
 .pill:hover {
     border-color: #ee6fcb;
 }
+
+.card,
+.weather-card {
+    max-width: 18rem;
+    min-height: 23rem;
+    -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0.16), 0 0 0 0 rgba(0,0,0,0.12);
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.16), 0 0 0 0 rgba(0,0,0,0.12);
+    margin: 20px; 
+    border: 1px solid #3e3a9b; 
+    flex-flow: column nowrap; 
+    color: white;
+}
+
+.card.weather-card .degree {
+    margin-bottom: 50px; 
+}
+
+.card.weather-card .degree:after {
+    content: '°F';
+    position: absolute;
+    font-size: 3rem;
+    margin-top: .9rem;
+    font-weight: 400;
+}
+
+.weather-card {
+    padding: 50px 10px;
+    position: relative; 
+    align-items: center; 
+}
+
+.card-title {
+    font: bold 50px/100% 'Darker Grotesque', sans-serif; 
+}
+
+.date {
+    margin-bottom: 50px; 
+}
+
+.future-weather {
+	margin-top: 5px;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	font-size: 14px;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.future-weather .weekday {
+	margin-right: auto;
+}
+
+.future-weather i {
+	color: #ffd200;
+	margin-right: 10px;
+}
+
+.future-weather:last-child {
+    border-bottom: 0; 
+}
+
+.card.weather-card .collapse-content a.collapsed:after {
+    content: 'This Week ↓';
+}
+
+.card.weather-card .collapse-content a:not(.collapsed):after {
+    content: 'Close ↑';
+    margin: auto; 
+}
+
+a.btn,
+a.btn:hover,
+a.btn:focus,
+a.btn:active {
+    box-shadow: unset; 
+    text-align: center;
+    margin: auto; 
+}
+
+.toggle-btn {
+    align-self: flex-start;
+    background: transparent; 
+}
