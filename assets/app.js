@@ -41,7 +41,7 @@ $('#search-city').keypress(function(e) {
 });
 
 // list of previously searched cities, show weather for city clicked
-$('.tophistory').click(function() {
+$('.pill').click(function() {
     cityName = $(this).attr('data-name');
     showWeather();
     console.log(cityName);
@@ -90,7 +90,9 @@ function previousCity() {
 
 async function showWeather() {
     // openweathermap api call
-    var openWeatherMap = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + ', '+ stateCode + "&units=imperial&appid=0db11239e44307838ff3571b683ebdc1";
+    var openWeatherMap = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + ','+ stateCode + "&units=imperial&appid=0db11239e44307838ff3571b683ebdc1";
+
+    console.log(cityName + ' lol'); 
 
     await $.ajax({
         url: openWeatherMap,

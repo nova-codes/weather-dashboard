@@ -36,7 +36,7 @@ header h1 {
 .tophistory {
     background: #e5e5e5;
     border-bottom: 1px solid #cdcdcd;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,6 +225,8 @@ a.collapsed {
 
 .quick-facts {
     font-size: 18px; 
+    display: flex;
+    flex-flow: row wrap; 
 }
 
 .text-info {
