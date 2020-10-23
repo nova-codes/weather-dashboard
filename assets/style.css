@@ -159,8 +159,11 @@ header h1 {
 
 .collapsing,
 .collapse.show {
-    display: block;
-    width: 20rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly; 
+    width: 45rem;
 }
 
 .future-weather {
@@ -172,15 +175,17 @@ header h1 {
 	align-items: center;
 	justify-content: flex-end;
 	font-size: 14px;
-	border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 
-.future-weather .weekday {
-	margin-right: auto;
+.weekday1,
+.weekday2,
+.weekday3,
+.weekday4,
+.weekday5 {
+	text-shadow: var(--text-outline);
 }
 
 .future-weather i {
-	color: #ffd200;
 	margin-right: 10px;
 }
 
@@ -190,11 +195,13 @@ header h1 {
 
 .card.weather-card .collapse-content a.collapsed:after {
     content: 'This Week ↓';
+    font-size: 15px; 
 }
 
 .card.weather-card .collapse-content a:not(.collapsed):after {
     content: 'Close ↑';
     margin: auto; 
+    font-size: 15px; 
 }
 
 a.btn,
@@ -259,4 +266,37 @@ a.collapsed {
 .uv-vhigh,
 .uv-extreme {
     color: #9c4856 !important;
+}
+
+.inner-card {
+    padding: 10px;
+    background: #397ac7;
+    border-radius: 10px;
+    opacity: 0.9;
+    margin: 5px; 
+    height: 230px; 
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between; 
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #3c61db;
+}
+
+.big-icon1,
+.big-icon2,
+.big-icon3,
+.big-icon4,
+.big-icon5 {
+    position: absolute;
+    left: 0;
+    top: 0; 
+    font-size: 150px; 
+    transform: rotate(40deg); 
+    z-index: 0; 
+    color: #01599d;
+    text-shadow: 2px 2px white; 
+    opacity: 0.3; 
+    mix-blend-mode: overlay;  
 }
