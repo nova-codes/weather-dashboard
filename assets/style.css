@@ -17,7 +17,7 @@ body {
 }
 
 header {
-    height: 150px;
+    height: 120px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -36,15 +36,18 @@ header h1 {
 .tophistory {
     background: #e5e5e5;
     border-bottom: 1px solid #cdcdcd;
-    padding: 15px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .tophistory { 
+    position: relative;
     background: #eaeaea;
 }
+
+.topsearch ::placeholder { color: #9e9e9e; }
 
 .active-purple-2 input.form-control[type=text]:focus:not([readonly]) {
     border-bottom: 1px solid #ce93d8;
@@ -58,12 +61,16 @@ header h1 {
   }
 
   input[type=text] {
-      width: 95% !important;
+      width: 90% !important;
+      padding: 5px 10px !important; 
   }
 
   button#search-city {
       border: 0; 
       outline: 0; 
+      background: transparent;
+      font-size: 16px; 
+      margin-left: 10px; 
   }
 
   .active-purple .fas, .active-purple-2 .fas {
@@ -72,6 +79,7 @@ header h1 {
 
   .md-form {
       margin: 0 auto; 
+      padding: 10px; 
   }
   
   .pill {
@@ -96,7 +104,7 @@ header h1 {
     min-height: 23rem;
     -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0.16), 0 0 0 0 rgba(0,0,0,0.12);
     box-shadow: 0 0 0 0 rgba(0,0,0,0.16), 0 0 0 0 rgba(0,0,0,0.12);
-    margin: 20px auto; 
+    margin: 25px auto; 
     border: 1px solid #3e3a9b; 
     flex-flow: column nowrap; 
     color: white;
@@ -121,7 +129,7 @@ header h1 {
 }
 
 .weather-card {
-    padding: 50px 10px;
+    padding: 50px 10px 25px;
     position: relative; 
     z-index: 1; 
     align-items: center; 
@@ -147,14 +155,14 @@ header h1 {
 }
 
 .card-title {
-    font: bold 50px/100% 'Darker Grotesque', sans-serif; 
+    font: bold 80px/100% 'Darker Grotesque', sans-serif; 
     text-shadow: var(--text-outline);
     letter-spacing: 2px; 
 }
 
 .date {
-    margin-bottom: 50px; 
-    font-size: 14px; 
+    margin-bottom: 30px; 
+    font-size: 18px; 
 }
 
 .collapsing,
@@ -177,20 +185,13 @@ header h1 {
 	font-size: 14px;
 }
 
-.weekday1,
-.weekday2,
-.weekday3,
-.weekday4,
-.weekday5 {
+.wkd-style,
+.w-style {
 	text-shadow: var(--text-outline);
 }
 
 .future-weather i {
 	margin-right: 10px;
-}
-
-.future-weather:last-child {
-    border-bottom: 0;
 }
 
 .card.weather-card .collapse-content a.collapsed:after {
@@ -212,7 +213,7 @@ a.collapsed {
     display: block; 
     box-shadow: unset; 
     text-align: center;
-    margin: 0 auto; 
+    margin: 10px auto; 
     width: 100px; 
 }
 
@@ -222,12 +223,19 @@ a.collapsed {
     margin: 0 auto; 
 }
 
+.toast {
+    padding: 15px 45px; 
+    border: 0; 
+}
+
 .alert {
-    font: bold 20px/100% 'Darker Grotesque', sans-serif;
-    color: red;
+    font: bold 18px/100% 'Darker Grotesque', sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 2px; 
     opacity: 0; 
     margin: 0px auto; 
-    transition: all .5s ease; 
+    transition: all 1s ease; 
 }
 
 .quick-facts {
@@ -274,7 +282,7 @@ a.collapsed {
     border-radius: 10px;
     opacity: 0.9;
     margin: 5px; 
-    height: 230px; 
+    height: 200px; 
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -284,14 +292,10 @@ a.collapsed {
     border: 1px solid #3c61db;
 }
 
-.big-icon1,
-.big-icon2,
-.big-icon3,
-.big-icon4,
-.big-icon5 {
+.i-style {
     position: absolute;
     left: 0;
-    top: 0; 
+    top: 30px; 
     font-size: 150px; 
     transform: rotate(40deg); 
     z-index: 0; 
@@ -299,4 +303,34 @@ a.collapsed {
     text-shadow: 2px 2px white; 
     opacity: 0.3; 
     mix-blend-mode: overlay;  
+}
+
+.future-temp {
+    width: 100%;
+    font-size: 16px; 
+    text-shadow: var(--text-outline); 
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid #6e6ada;
+}
+
+.socials {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.socials a {
+    color: white;
+    text-shadow: var(--text-outline);
 }

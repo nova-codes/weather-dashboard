@@ -16,8 +16,7 @@ $('#search-city').click(function(event) {
     cityName = $('#search-input').val().trim();
 
     if(cityName === '') {
-        $('.alert').css('opacity', '1');
-       
+        $('.toast').toast('show');  
     }
     else if(searchHistory.length >= 5) {
         searchHistory.shift();
@@ -91,7 +90,7 @@ function previousCity() {
 
 async function showWeather() {
     // openweathermap api call
-    var openWeatherMap = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + ','+ stateCode + "&units=imperial&appid=0db11239e44307838ff3571b683ebdc1";
+    var openWeatherMap = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + ',' + stateCode + "&units=imperial&appid=0db11239e44307838ff3571b683ebdc1";
 
     console.log(cityName + ' lol'); 
 
@@ -159,37 +158,37 @@ async function showWeather() {
             $('.weekday1').text(moment().add(1, "days").format("dddd"));
             $(".big-icon1").html(icon1);
             // $("#current-weather").text(response.list[4].weather[0].main);
-            $("#weather1").text(response.list[4].weather[0].main);
-            $(".hi-low1").text(response.list[4].main.temp_max + '° / ' + response.list[4].main.temp_min + '°');
-            $("#humidity1").text("Humidity: " + response.list[4].main.temp + "%");
+            $(".weather1").text(response.list[4].weather[0].main);
+            $(".hi-low1").text(response.list[4].main.temp + '°');
+            $(".humidity1").text(response.list[4].main.humidity + "%");
             // PULLS DATA FOR DAY 2 WEATHER
             $('.weekday2').text(moment().add(2, "days").format("dddd"));
             $(".big-icon2").html(icon2);
             // $("#current-weather").text(response.list[12].weather[0].main);
-            $("#weather2").text(response.list[12].weather[0].main);
-            $(".hi-low2").text(response.list[12].main.temp_max + '° / ' + response.list[12].main.temp_min + '°');
-            $("#humidity2").text("Humidity: " + response.list[12].main.temp + "%");
+            $(".weather2").text(response.list[12].weather[0].main);
+            $(".hi-low2").text(response.list[12].main.temp + '°');
+            $(".humidity2").text(response.list[12].main.humidity + "%");
             // PULLS DATA FOR DAY 3 WEATHER
             $('.weekday3').text(moment().add(3, "days").format("dddd"));
             $(".big-icon3").html(icon3);
             // $("#current-weather").text(response.list[20].weather[0].main);
-            $("#weather3").text(response.list[20].weather[0].main);
-            $(".hi-low3").text(response.list[20].main.temp_max + '° / ' + response.list[20].main.temp_min + '°');
-            $("#humidity3").text("Humidity: " + response.list[20].main.temp + "%");
+            $(".weather3").text(response.list[20].weather[0].main);
+            $(".hi-low3").text(response.list[20].main.temp + '°');
+            $(".humidity3").text(response.list[20].main.humidity + "%");
             // PULLS DATA FOR DAY 4 WEATHER
             $('.weekday4').text(moment().add(4, "days").format("dddd"));
             $(".big-icon4").html(icon4);
             // $("#current-weather").text(response.list[28].weather[0].main);
-            $("#weather4").text(response.list[28].weather[0].main);
-            $(".hi-low4").text(response.list[28].main.temp_max + '° / ' + response.list[28].main.temp_min + '°');
-            $("#humidity4").text("Humidity: " + response.list[28].main.temp + "%");
+            $(".weather4").text(response.list[28].weather[0].main);
+            $(".hi-low4").text(response.list[28].main.temp + '°');
+            $(".humidity4").text(response.list[28].main.humidity + "%");
             // PULLS DATA FOR DAY 5 WEATHER
             $('.weekday5').text(moment().add(5, "days").format("dddd"));
             $(".big-icon5").html(icon5);
             // $("#current-weather").text(response.list[36].weather[0].main);
-            $("#weather5").text(response.list[36].weather[0].main);
-            $(".hi-low5").text(response.list[36].main.temp_max + '° / ' + response.list[36].main.temp_min + '°');
-            $("#humidity5").text("Humidity: " + response.list[36].main.temp + "%"); 
+            $(".weather5").text(response.list[36].weather[0].main);
+            $(".hi-low5").text(response.list[36].main.temp + '°');
+            $(".humidity5").text(response.list[36].main.humidity + "%"); 
         
     })
 }
