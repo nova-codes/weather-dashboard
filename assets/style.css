@@ -101,7 +101,7 @@ header h1 {
 
 .card,
 .weather-card {
-    max-width: 52rem;
+    max-width: 65rem;
     min-height: 23rem;
     -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0.16), 0 0 0 0 rgba(0,0,0,0.12);
     box-shadow: 0 0 0 0 rgba(0,0,0,0.16), 0 0 0 0 rgba(0,0,0,0.12);
@@ -130,7 +130,7 @@ header h1 {
 }
 
 .weather-card {
-    padding: 50px 10px 25px;
+    padding: 10px;
     position: relative; 
     z-index: 1; 
     align-items: center; 
@@ -171,7 +171,7 @@ header h1 {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-evenly; 
-    width: 45rem;
+    width: 60rem;
 }
 
 .future-weather {
