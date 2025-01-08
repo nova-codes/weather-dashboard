@@ -14,6 +14,7 @@ body {
     color: #232323;
     padding: 0;
     margin: 0;
+    margin-bottom: 60px;
 }
 
 header {
@@ -36,7 +37,6 @@ header h1 {
 .tophistory {
     background: #e5e5e5;
     border-bottom: 1px solid #cdcdcd;
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,6 +45,7 @@ header h1 {
 .tophistory { 
     position: relative;
     background: #eaeaea;
+    padding: 5px;
 }
 
 .topsearch ::placeholder { color: #9e9e9e; }
@@ -161,7 +162,6 @@ header h1 {
 }
 
 .date {
-    margin-bottom: 30px; 
     font-size: 18px; 
 }
 
@@ -177,12 +177,12 @@ header h1 {
 .future-weather {
     width: 100%;
     box-sizing: border-box;
-	margin-top: 5px;
-	padding: 15px;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	font-size: 14px;
+    margin-top: 5px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
 }
 
 .wkd-style,
@@ -259,7 +259,6 @@ a.collapsed {
 #current-weather {
     text-align: center;
     font-size: 30px; 
-    margin-bottom: 50px; 
 }
 
 .uv-favorable {
@@ -314,13 +313,14 @@ a.collapsed {
 footer {
     width: 100%;
     height: 50px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0; 
     display: flex;
     align-items: center;
     justify-content: flex-end;
     border-top: 1px solid #6e6ada;
+    z-index: 2;
 }
 
 .socials {
